@@ -1,0 +1,7 @@
+<div class="ng-viewport" (touchstart)="onTouchStart($event)">
+	@for (touch of touches(); track touch.id) {
+		<div>{{ touch.x }} : {{ touch.y }}</div>
+	}
+</div>
+
+<div>MAX TOUCHES: {{ maxTouches }}</div>
