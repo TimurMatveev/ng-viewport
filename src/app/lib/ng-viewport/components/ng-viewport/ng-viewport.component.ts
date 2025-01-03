@@ -13,6 +13,7 @@ export class NgViewportComponent {
   maxTouches = window.navigator.maxTouchPoints;
 
   onTouchStart(event: TouchEvent): void {
+    event.preventDefault();
     this.touches.set(Array.from(event.touches).map((touch, index) => ({ id: index + 1, x: touch.screenX, y: touch.screenY })));
   }
 }
